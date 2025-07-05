@@ -6,10 +6,10 @@ class FlappyCode {
         this.height = this.canvas.height;
         
         this.gameState = 'start';
-        this.score = 0;
-        this.bestScore = localStorage.getItem('flappyCodeBest') || 0;
-        
-        this.selectedCharacter = 'terminal';
+        // this.score = 0;
+        // this.bestScore = localStorage.getItem('flappyCodeBest') || 0;
+        //
+        // this.selectedCharacter = 'terminal';
         this.characterEmojis = {
             terminal: '💻',
             bug: '🐛',
