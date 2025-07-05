@@ -505,8 +505,7 @@ const PianoPlayer = () => {
                       `}
                       style={{
                         animationDuration: '0.6s',
-                        animationIterationCount: '1',
-                        animationKey: animationKey as any
+                        animationIterationCount: '1'
                       }}
                     >
                       <span className="text-sm text-gray-800 font-bold mb-1">
@@ -533,7 +532,7 @@ const PianoPlayer = () => {
                     <button
                       key={key.note}
                       onMouseDown={() => playNote(key.note)}
-                      style={{ left: `${leftOffset + 4}px`, animationKey: animationKey as any }}
+                      style={{ left: `${leftOffset + 4}px` }}
                       className={`
                         absolute w-12 h-40 bg-black border border-gray-800 rounded-b-lg shadow-2xl text-white
                         hover:bg-gray-800 active:bg-gray-700
