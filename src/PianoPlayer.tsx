@@ -491,7 +491,6 @@ const PianoPlayer = () => {
               <div className="flex">
                 {pianoKeys.filter(key => key.type === 'white').map((key) => {
                   const isActive = Array.from(activeKeys).some((activeKey: any) => activeKey.startsWith(key.note));
-                  const animationKey = keyAnimations.get(key.note) || 0;
                   
                   return (
                     <button
@@ -526,7 +525,6 @@ const PianoPlayer = () => {
                   let leftOffset = (whiteKeyIndex * 64) - 24;
                   
                   const isActive = Array.from(activeKeys).some((activeKey: any) => activeKey.startsWith(key.note));
-                  const animationKey = keyAnimations.get(key.note) || 0;
                   
                   return (
                     <button
