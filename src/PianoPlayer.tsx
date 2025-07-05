@@ -160,7 +160,6 @@ const t = (key: string) => (TRANSLATIONS[locale] as any)?.[key] || (TRANSLATIONS
 
 const PianoPlayer = () => {
   const [activeKeys, setActiveKeys] = useState(new Set());
-  const [keyAnimations, setKeyAnimations] = useState(new Map());
   const [songInput, setSongInput] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
   const [currentSong, setCurrentSong] = useState<any>(null);
@@ -274,8 +273,6 @@ const PianoPlayer = () => {
       const noteKey = `${note}-${Date.now()}`;
       setActiveKeys(prev => new Set([...prev, noteKey]));
       
-      setKeyAnimations(prev => new Map(prev.set(note, Date.now())));
-      
       setTimeout(() => {
         setActiveKeys(prev => {
           const newSet = new Set(prev);
@@ -365,8 +362,6 @@ const PianoPlayer = () => {
         
         const noteKey = `${note.note}-${index}-${Date.now()}`;
         setActiveKeys(prev => new Set([...prev, noteKey]));
-        
-        setKeyAnimations(prev => new Map(prev.set(note.note, Date.now())));
         
         setTimeout(() => {
           setActiveKeys(prev => {
